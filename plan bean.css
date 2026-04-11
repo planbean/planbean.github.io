@@ -1,0 +1,511 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.fade-in {
+    opacity: 0;
+    transform: translateY(10vw);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+  
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .content-block {
+    background: #ffffff;
+    border-radius: 8px;
+  }
+
+
+
+.topspace{
+    height:10vw ;
+}
+ 
+
+ .logo{
+  height: 100%;
+  display: flex;
+ }
+ .logo img{
+  height: 90%;
+  margin: 0 0 0 1vw;
+ }
+
+
+
+  header {
+    height: 8vw;
+        width: 100%;
+  position: fixed;
+  display: flex;
+  z-index: 1000;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+  transition: all 0.4s ease-in-out;
+}
+
+
+/* JavaScript  .scrolled active*/
+header.scrolled {
+  background-color: white;
+  padding-top: 1vh; 
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.hero {
+  height: 50vw; 
+  width: 100%;
+  background:linear-gradient(
+    rgba(0, 0, 0, 0.0), 
+    rgba(0, 0, 0, 0.0)
+  ), url('photo/14-1.png');
+  background-size: 100% ; 
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn{
+  display: flex;
+  margin-right: 2vw;
+}
+
+.listbtn{
+  width: 6.5vw;
+  height: 3vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-style: solid;
+  border-width: 0.15vw;
+  border-color: white;
+  color: white;
+  font-size: 1vw;
+  margin: 1vw;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+ 
+}
+.listbtn:hover{
+  background-color: #ffffff;
+  color: black;
+}
+
+.listbtn.scrolled{
+  color: rgb(0, 0, 0);
+  border-color: rgb(0, 0, 0);
+}
+.listbtn.scrolled:hover{
+  color: #ffffff;
+  background-color: #000000;
+}
+
+.listbtng{
+  width: 7vw;
+  height: 3vw;
+  color: white;
+  font-size:1vw ;
+  margin: 1vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  border-color: rgba(0, 0, 0, 0);
+  border-style: solid;
+  border-width: 0.1vw;
+}
+.listbtng:hover{
+  background-color: #ffffff;
+  color: black;
+}
+
+.listbtng.scrolled{
+  color: rgb(0, 0, 0);
+  border-color: rgb(0, 0, 0);
+  border-style: solid;
+  border-width: 0.1vw;
+}
+.listbtng.scrolled:hover{
+  color: #ffffff;
+  background-color: #000000;
+}
+
+
+
+.wordspace{
+  width: 0.2vw;
+}
+
+
+
+
+
+/*北屯區*/
+.beitun{
+  position: absolute;
+  top: 58.2vw;
+  left: 26.5vw;
+  width:22vw ;
+  fill:rgb(255, 255, 255);
+  transition: all 0.4s ease-in-out;
+  filter: drop-shadow(5px 8px 16px rgba(0, 0, 0, 0.3));
+  }
+  .beitun:hover{
+    fill: black;
+  }
+ 
+
+  .beitunword{
+    font-size: 1vw;
+    fill: #000000 !important;
+  transition: all 0.4s ease-in-out;
+
+  }
+  .beitunword:hover{
+    font-size: 1.2vw;
+     fill: #ffffff;
+  }
+  
+
+  /*西屯區*/
+.xitun{
+  position: absolute;
+  top: 59.8vw;
+  left: 13.3vw;
+  width:13.44vw ;
+  fill:rgb(255, 255, 255);
+  transition: all 0.4s ease-in-out;
+  filter: drop-shadow(0px 8px 8px rgba(0, 0, 0, 0.3));
+    
+  }
+  .xitun:hover{
+    fill: black;
+  }
+  .xitunword{
+    font-size: 1vw;
+    fill:brown
+  }
+
+   /*南屯區*/
+.nantun{
+  position: absolute;
+  top: 69vw;
+  left: 11.85vw;
+  width:12.7vw ;
+  fill:rgb(255, 255, 255);
+  transition: all 0.4s ease-in-out;
+  filter: drop-shadow(-10px 8px 16px rgba(0, 0, 0, 0.3));
+  }
+  .nantun:hover{
+    fill: black;
+  }
+  .nantunword{
+    font-size: 1vw;
+    fill:brown
+  }
+
+  /*北區*/
+.bei{
+  position: absolute;
+  top: 66.6vw;
+  left: 26.5vw;
+  width:6.1vw ;
+  fill:rgb(255, 255, 255);
+  transition: all 0.4s ease-in-out;
+  filter: drop-shadow(0px 8px 8px rgba(0, 0, 0, 0.3));
+  }
+  .bei:hover{
+    fill: black;
+  }
+  .beiword{
+    font-size: 5vw;
+    fill:brown
+  }
+
+  /*西區*/
+.xi{
+  position: absolute;
+  top: 70.8vw;
+  left: 24.5vw;
+  width:4.8vw ;
+  fill:rgb(255, 255, 255);
+  transition: all 0.4s ease-in-out;
+  filter: drop-shadow(0px 8px 8px rgba(0, 0, 0, 0.3));
+  }
+  .xi:hover{
+    fill: black;
+  }
+  .xiword{
+    font-size: 5vw;
+    fill:brown
+  }
+
+  /*中區*/
+.mid{
+  position: absolute;
+  top: 72.5vw;
+  left: 29vw;
+  width:2vw ;
+  fill:rgb(255, 255, 255);
+  transition: all 0.4s ease-in-out;
+  filter: drop-shadow(0px 8px 8px rgba(0, 0, 0, 0.3));
+  }
+  .mid:hover{
+    fill: black;
+  }
+  .midword{
+    font-size: 5vw;
+    fill:brown
+  }
+
+   /*南區*/
+.nan{
+  position: absolute;
+  top: 76.5vw;
+  left: 23.5vw;
+  width:6.1vw ;
+  fill:rgb(255, 255, 255);
+  transition: all 0.4s ease-in-out;
+  filter: drop-shadow(0px 8px 8px rgba(0, 0, 0, 0.3));
+  }
+  .nan:hover{
+    fill: black;
+  }
+  .nanword{
+    font-size: 5vw;
+    fill:brown
+  }
+
+  /*東區*/
+.tun{
+  position: absolute;
+  top: 73vw;
+  left: 31vw;
+  width:4.5vw ;
+  fill:rgb(255, 255, 255);
+  transition: all 0.4s ease-in-out;
+  filter: drop-shadow(0px 8px 8px rgba(0, 0, 0, 0.3));
+  }
+  .tun:hover{
+    fill: black;
+  }
+  .tunword{
+    font-size: 5vw;
+    fill:brown
+  }
+
+  .second{
+    width: 100%;
+    height: 50vw;
+  }
+
+  .third{
+    width: 100%;
+    height: 110vw;
+    background-color: #000000;
+  }
+
+  .note1{
+    position: relative;
+    width: 25vw;
+    height: 30vw;
+    left: 60vw;
+    top: 6vw;
+    z-index: 100;
+    background-color: #ffffff;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.7);
+  }
+
+  .sticky-note {
+  width: 20vw;
+  height: 18vw;
+  padding: 2vw;
+  margin: 2vw;
+  cursor: pointer;
+  
+  /* 便利貼經典黃色與漸層（模擬光線從左上來） */
+  background: #fefabc;
+  background: linear-gradient(135deg, #fefabc 0%, #fff782 100%);
+  
+  /* 文字樣式 */
+  font-family: "Klee One", "Microsoft JhengHei", cursive; /* 建議使用手寫感字體 */
+  color: #333;
+  line-height: 1.5;
+  
+  /* 關鍵：讓便利貼看起來歪歪的更真實 */
+  transform: rotate(-2deg);
+  
+  /* 陰影：讓紙張看起來浮在平面上 */
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+  
+  /* 為了讓捲角效果能定位 */
+  position: relative;
+  left: 60vw;
+  top: 6vw;
+  transition: transform 0.3s ease;
+  display: none;
+}
+
+/* 懸停效果：滑鼠移上去時，便利貼會稍微「回正」並浮起來 */
+.sticky-note:hover {
+  transform: rotate(0deg) scale(1.05);
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+:root {
+  --brand-gold: #d8c4a0; /* 定義圖片中的淺金色 */
+}
+
+.project-bean-section {
+  /* 1. 設定背景圖片 (使用產生的 image_2.png) */
+  background-image: url('photo/background01.png');
+  
+  /* 2. 關鍵屬性：確保圖片填滿容器且不變形 */
+  background-size: cover;
+  
+  /* 3. 將光線來源對齊左上角，保留最美的一面 */
+  background-position: left top;
+  
+  /* 4. 防止圖片重複貼上 */
+  background-repeat: no-repeat;
+  
+  /* 5. 進階技巧：如果圖片沒跑出來，用純灰當底 */
+  background-color: #f4f4f4; 
+  
+  /* 6. 其他佈局樣式 */
+  width: 100%;
+  min-height: 800px;
+  color: #333; /* 文字要夠深，才能在淺灰背景下看清楚 */
+}
+
+.note{
+  width: 45vw;
+  position: relative;
+  left: 50vw;
+  top: 4vw;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: all 0.4s ease-in-out;
+}
+.note img{
+  width: 100%;
+  
+}
+
+.note.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.note2{
+  width: 45vw;
+  position:absolute;
+  left: 40vw;
+  top: 55vw;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: all 0.4s ease-in-out;
+}
+.note2 img{
+  width: 110%;
+  
+}
+
+.note2.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+.note3{
+  width: 45vw;
+  position: absolute;
+  left: 32vw;
+  top: 56vw;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: all 0.4s ease-in-out;
+}
+.note3 img{
+  width: 130%;
+  
+}
+
+.note3.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.footer{
+  width: 100%;
+  height: 27vw;
+  background-color: #000000;
+  display: block;
+}
+.footerdiv{
+  display: flex;
+  justify-content: center;
+}
+.footer img{
+  width:fit-content ;
+  justify-content: center;
+  height: 15vw;
+}
+
+.footericon{
+    height: 6vw;background-color: black;display: flex;justify-content: center;margin-bottom: 2vw;
+  }
+  .footericondiv{
+    width: 40%;display: flex;justify-content: space-evenly;height: 2vw;margin-top: 2vw;transition: all 0.5s;
+  }
+  .footericondiv img{
+    height: 100%;
+    border-radius: 50%;
+    border-width: 0.1vw;
+    border-style: solid;
+    border-color: white;
+    cursor: pointer;
+  }
+  
+  .footericon img:hover{
+    border: none;
+  }
+
+  .footerword{
+    font-size: 1vw;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: white;
+    font-weight: lighter;
+    margin-bottom: 2vw;
+  }
+  
+
