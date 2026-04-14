@@ -11,22 +11,35 @@
     </head>    
     <body>
         
-        <header class="header" id="main-header" >
-        <a href="index.html" class="logo">
+       <header class="header" >
+        <a href="index.html" style="text-decoration: none;" class="logo">
              <img src="logo/plant bean for AI02.png">
         </a>
         <div class="btn">
+            <img src="photo/plant bean for AI02.png" class="headerimg">
             <a href="index.html" style="text-decoration: none;" class="listbtn" id="main-btn">
-                首<div class="wordspace"></div>頁
+                首<div class="wordspace"></div>頁 ｜ MAIN
             </a>
             <a href="product.html" style="text-decoration: none;" class="listbtng" id="main-btng">
-                產<div class="wordspace"></div>品
+                產<div class="wordspace"></div>品 ｜ PRODUCT
             </a>
-            <div class="listbtng" id="main-btngg">
-                cafe
+             <a href="aboutus.html" style="text-decoration: none;" class="listbtng" id="main-btng">
+                關<div class="wordspace"></div>於<div class="wordspace"></div>我<div class="wordspace"></div>們｜ ABOUT US
+            </a>
+            <a href="joinus.html" style="text-decoration: none;" class="listbtng" id="main-btngg">
+                加<div class="wordspace"></div>入<div class="wordspace"></div>我<div class="wordspace"></div>們｜ JOIN US
+            </a>
+           
+            <div class="listicon">
+                <a href="cart.html">
+                <img style="width: 100%;cursor: pointer;" src="header icon/17.png" onmouseover="headera(this)" onmouseout="headeraa(this)" id="hda">
+                </a>
             </div>
-            <div class="listbtng" id="main-btnggg">
-                聯<div class="wordspace"></div>絡<div class="wordspace"></div>我<div class="wordspace"></div>們
+            <div class="listicon">
+                <img style="width: 100%;cursor: pointer;" src="header icon/18.png" onmouseover="headerb(this)" onmouseout="headerbb(this)" id="hdb">
+            </div>
+            <div class="listicon">
+                <img style="width: 100%;cursor: pointer;" src="header icon/19.png" onmouseover="headerc(this)" onmouseout="headercc(this)" id="hdc">
             </div>
         </div>
   
@@ -39,27 +52,88 @@
                 <div class="productword">PRODUCT</div>
 
             </div>
-            <div>
-                <img src="在地烘豆商 的複本/8.png" style="width: 80%;margin-left: 10%;">
+            
+            
+           
+
+
+            <div class="product-card" data-id="block-01" data-name="去味咖啡塊" data-price="130" data-image="product/a.png">
+            
+                <div class="product-image-container">
+                    <img src="product/1.png" alt="去味咖啡塊" class="product-img">
+                    <div class="quantity-overlay">
+                    <button class="qty-btn minus-btn">−</button>
+                    <input type="number" class="qty-input" value="1" min="1">
+                    <button class="qty-btn plus-btn">+</button>
+                    </div>
+                </div>
+
+                <div class="product-info">
+                    <h3 class="product-title">去味咖啡塊</h3>
+                    <p class="product-price">NT$ 130</p>
+                    <button class="add-to-cart-btn">加入購物車</button>
+                </div>
             </div>
-            <div>
-                <img src="在地烘豆商 的複本/15.png" style="width: 80%;margin-left: 10%;">
-            </div>
-            <div>
-                <img src="在地烘豆商 的複本/7.png" style="width: 80%;margin-left: 10%;">
-            </div>
-            <div>
-                <img src="在地烘豆商 的複本/3.png" style="width: 80%;margin-left: 10%;">
-            </div>
-            <div class="second">
-               
+
+
+            <div class="product-card" data-id="cup-02" data-name="天然磨砂洗手乳" data-price="100" data-image="product/b.png">
+            <div class="product-image-container">
+                <img src="product/2.png" alt="天然磨砂洗手乳" class="product-img">
                 
-                
-                
+                <div class="quantity-overlay">
+                <button class="qty-btn minus-btn">−</button>
+                <input type="number" class="qty-input" value="1" min="1">
+                <button class="qty-btn plus-btn">+</button>
+                </div>
             </div>
-            <div class="project-bean-section">
-                
+            <div class="product-info">
+                <h3 class="product-title">天然磨砂洗手乳</h3>
+                <p class="product-price">NT$ 100</p>
+                <button class="add-to-cart-btn">加入購物車</button>
             </div>
+            </div>
+
+
+            <div class="product-card" data-id="tree-02" data-name="廚房強力清潔泥" data-price="100" data-image="product/c.png">
+            <div class="product-image-container">
+                <img src="product/3.png" alt="廚房強力清潔泥" class="product-img">
+                
+                <div class="quantity-overlay">
+                <button class="qty-btn minus-btn">−</button>
+                <input type="number" class="qty-input" value="1" min="1">
+                <button class="qty-btn plus-btn">+</button>
+                </div>
+            </div>
+            <div class="product-info">
+                <h3 class="product-title">廚房強力清潔泥</h3>
+                <p class="product-price">NT$ 100</p>
+                <button class="add-to-cart-btn">加入購物車</button>
+            </div>
+            </div>
+
+
+            <div class="product-card" data-id="mug-02" data-name="咖啡發酵盒" data-price="350" data-image="product/d.png">
+            <div class="product-image-container">
+                <img src="product/4.png" alt="咖啡發酵盒" class="product-img">
+                
+                <div class="quantity-overlay">
+                <button class="qty-btn minus-btn">−</button>
+                <input type="number" class="qty-input" value="1" min="1">
+                <button class="qty-btn plus-btn">+</button>
+                </div>
+            </div>
+            <div class="product-info">
+                <h3 class="product-title">咖啡發酵盒</h3>
+                <p class="product-price">NT$ 350</p>
+                <button class="add-to-cart-btn">加入購物車</button>
+            </div>
+            </div>
+
+
+
+
+           
+            
            
             
         </main>
@@ -81,61 +155,118 @@
             <div class="footerword">Copyright resvered Plan-Bean 2026.</div>
         </footer>
         <script>
-            window.addEventListener('scroll', function() {
-             const header = document.getElementById('main-header');
-  
-            // 設定捲動超過 50 像素後變色
-            if (window.scrollY > 30) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
-            });
 
 
-             window.addEventListener('scroll', function() {
-             const header = document.getElementById('main-btn');
-  
-            // 設定捲動超過 50 像素後變色
-            if (window.scrollY > 30) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
-            });
 
-            window.addEventListener('scroll', function() {
-             const header = document.getElementById('main-btng');
-  
-            // 設定捲動超過 50 像素後變色
-            if (window.scrollY > 30) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
-            });
+// 取得所有的按鈕和輸入框
+// 1. 選取畫面上所有的商品卡片
+const productCards = document.querySelectorAll('.product-card');
 
-            window.addEventListener('scroll', function() {
-             const header = document.getElementById('main-btngg');
-  
-            // 設定捲動超過 50 像素後變色
-            if (window.scrollY > 30) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
-            });
+// 2. 針對每一個商品卡片，分別設定它們專屬的數量按鈕功能
+productCards.forEach(card => {
+  // 注意：這裡是用 card.querySelector，只在「當前這個卡片」裡面找元素
+  const minusBtn = card.querySelector('.minus-btn');
+  const plusBtn = card.querySelector('.plus-btn');
+  const qtyInput = card.querySelector('.qty-input');
 
-            window.addEventListener('scroll', function() {
-             const header = document.getElementById('main-btnggg');
-  
-            // 設定捲動超過 50 像素後變色
-            if (window.scrollY > 30) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
-            });
+  // 點擊「減少」按鈕
+  minusBtn.addEventListener('click', () => {
+    let currentValue = parseInt(qtyInput.value);
+    // 確保數量不會小於 1
+    if (currentValue > 1) {
+      qtyInput.value = currentValue - 1;
+    }
+  });
+
+  // 點擊「增加」按鈕
+  plusBtn.addEventListener('click', () => {
+    let currentValue = parseInt(qtyInput.value);
+    // 可以設定一個最大值，例如最多買 99 個
+    if (currentValue < 99) {
+      qtyInput.value = currentValue + 1;
+    }
+  });
+
+  // 防呆：防止使用者手動輸入負數或非數字
+  qtyInput.addEventListener('change', () => {
+    let currentValue = parseInt(qtyInput.value);
+    if (isNaN(currentValue) || currentValue < 1) {
+      qtyInput.value = 1; // 如果亂輸入，就強制恢復為 1
+    }
+  });
+});
+
+
+// 在商品頁的 JS
+const addToCartBtns = document.querySelectorAll('.add-to-cart-btn');
+
+addToCartBtns.forEach(btn => {
+  btn.addEventListener('click', (e) => {
+    // 1. 抓取被點擊的那個商品卡片
+    const card = e.target.closest('.product-card');
+    
+    // 2. 收集商品資訊
+    const product = {
+      id: card.dataset.id,
+      name: card.dataset.name,
+      price: parseInt(card.dataset.price),
+      image: card.dataset.image,
+      quantity: parseInt(card.querySelector('.qty-input').value)
+    };
+
+    // 3. 從瀏覽器記憶中拿出舊的購物車清單 (如果是空的就建立空陣列 [])
+    let cart = JSON.parse(localStorage.getItem('dotPlanCart')) || [];
+
+    // 4. 檢查購物車裡是不是已經有這個商品了？
+    const existingItem = cart.find(item => item.id === product.id);
+    
+    if (existingItem) {
+      existingItem.quantity += product.quantity; // 有的話，數量累加
+    } else {
+      cart.push(product); // 沒有的話，新增進去
+    }
+
+    // 5. 將更新後的購物車清單，存回瀏覽器記憶中
+    localStorage.setItem('dotPlanCart', JSON.stringify(cart));
+
+    // (選擇性) 這裡可以加上你之前寫好的「打開購物車側邊欄」的程式碼
+    alert(`已將 ${product.quantity} 個 ${product.name} 加入購物車！`);
+  });
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            /*header icon*/
+function headera(){
+    document.getElementById("hda").src="header icon/17-1.png"
+}
+function headeraa(){
+    document.getElementById("hda").src="header icon/17.png"
+}
+function headerb(){
+    document.getElementById("hdb").src="header icon/18-1.png"
+}
+function headerbb(){
+    document.getElementById("hdb").src="header icon/18.png"
+}
+function headerc(){
+    document.getElementById("hdc").src="header icon/19-1.png"
+}
+function headercc(){
+    document.getElementById("hdc").src="header icon/19.png"
+}
 
 
 
