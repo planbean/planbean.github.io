@@ -1,0 +1,306 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.fade-in {
+    opacity: 0;
+    transform: translateY(10vw);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+  
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .content-block {
+    background: #ffffff;
+    border-radius: 8px;
+  }
+
+  .topspace{
+    height:8vw ;
+}
+   .logo{
+    width: 100%;
+  height: 100%;
+  display: flex;
+ }
+ .logo img{
+  height: 100%;
+  margin: 0 0 0 1vw;
+ }
+
+
+
+ .header {
+    height: 8vw;
+    width: 100%;
+  position: fixed;
+  display: flex;
+  background-color: white;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.4s ease-in-out;
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+.headerimg{
+  width: 25vw;
+  rotate: 3deg;
+  position: absolute;
+  left: 13.5vw;
+  top: 1vw;
+  overflow: hidden;
+}
+
+
+
+
+
+.btn{
+  display: flex;
+  margin-right: 2vw;
+}
+
+.listbtn{
+  width: 8vw;
+  height: 3vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  color: rgb(0, 0, 0);
+  font-size: 1vw;
+  margin: 1vw 0.7vw 1vw 0.7vw;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+  z-index: 100;
+ 
+}
+.listbtn:hover{
+  background-color: #000000;
+  color: rgb(255, 255, 255);
+}
+
+
+
+
+.listbtng{
+  width: 11vw;
+  height: 3vw;
+  color: rgb(0, 0, 0);
+  font-size:1vw ;
+  margin: 1vw ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  border-color: rgba(0, 0, 0, 0);
+  border-style: solid;
+  border-width: 0.1vw;
+}
+.listbtng:hover{
+  background-color: #000000;
+  color: rgb(255, 255, 255);
+}
+
+
+.listicon{
+  width: 4vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.hero {
+  height: 15vw; 
+  width: 80%;
+  margin-left: 10%;
+  background:linear-gradient(
+    rgba(255, 255, 255, 0.2), 
+    rgba(255, 255, 255, 0.2)
+  ), url('在地烘豆商 的複本/6.png');
+  background-size: 100% ; 
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.4);
+}
+
+
+.productword{
+    width: 90vw;
+    text-align: center;
+    font-size: 6vw;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color:#b5c75d ;
+    font-weight: bolder;
+    letter-spacing: 0.8em;
+}
+
+
+
+
+
+
+
+
+
+/* --- 整體容器 --- */
+.checkout-container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  font-family: "Microsoft JhengHei", sans-serif;
+}
+
+.checkout-title {
+  color: #333;
+  border-bottom: 2px solid #f4ece4;
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+}
+
+/* --- 單項商品橫列 --- */
+.cart-item {
+  display: flex;
+  align-items: center;
+  padding: 15px 0;
+  border-bottom: 1px solid #eee;
+  gap: 20px; /* 元素之間的間距 */
+}
+
+.item-img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* 讓商品資訊區塊自動填滿剩餘空間 */
+.item-info {
+  flex-grow: 1; 
+}
+
+.item-name { margin: 0 0 5px 0; color: #333; }
+.item-price { margin: 0; color: #888; font-size: 14px; }
+
+/* 數量控制器 (微調外觀以適合白色背景) */
+.item-quantity {
+  display: flex;
+  align-items: center;
+  background-color: #f9f9f9;
+  border-radius: 20px;
+  padding: 2px 5px;
+}
+.qty-btn { background: transparent; border: none; font-size: 18px; cursor: pointer; width: 30px;}
+.qty-input { width: 40px; text-align: center; border: none; background: transparent; font-weight: bold; outline: none; }
+.qty-input::-webkit-outer-spin-button, .qty-input::-webkit-inner-spin-button { -webkit-appearance: none; }
+
+/* 小計與移除按鈕 */
+.item-subtotal {
+  width: 100px;
+  text-align: right;
+  font-weight: bold;
+  color: #d8c4a0; /* 品牌色 */
+}
+
+.remove-btn {
+  background: transparent;
+  border: none;
+  color: #ccc;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.remove-btn:hover { color: #e74c3c; }
+
+/* --- 總計區塊 --- */
+.cart-summary {
+  margin-top: 30px;
+  text-align: right;
+}
+
+.total-row {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.checkout-submit-btn {
+  background-color: #d8c4a0;
+  color: #fff;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.checkout-submit-btn:hover { background-color: #c4af8b; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+.footer{
+  width: 100%;
+  height: 10vw;
+  background-color: #4c974c;
+  display: block;
+}
+.footerdiv{
+  display: flex;
+  justify-content: center;
+}
+.footer img{
+  width:fit-content ;
+  justify-content: center;
+  height: 8vw;
+}
+
+.footericon{
+    height: 6vw;background-color: black;display: none;justify-content: center;margin-bottom: 2vw;
+  }
+  .footericondiv{
+    width: 40%;display: flex;justify-content: space-evenly;height: 2vw;margin-top: 2vw;transition: all 0.5s;
+  }
+  .footericondiv img{
+    height: 100%;
+    border-radius: 50%;
+    border-width: 0.1vw;
+    border-style: solid;
+    border-color: white;
+    cursor: pointer;
+  }
+  
+  .footericon img:hover{
+    border: none;
+  }
+
+  .footerword{
+    font-size: 1vw;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: white;
+    font-weight: lighter;
+    margin-bottom: 2vw;
+  }

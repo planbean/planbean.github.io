@@ -1,0 +1,236 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.fade-in {
+    opacity: 0;
+    transform: translateY(10vw);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+  
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .content-block {
+    background: #ffffff;
+    border-radius: 8px;
+  }
+
+  .topspace{
+    height:8vw ;
+}
+   .logo{
+    width: 100%;
+  height: 100%;
+  display: flex;
+ }
+ .logo img{
+  height: 100%;
+  margin: 0 0 0 1vw;
+ }
+
+
+
+ .header {
+    height: 8vw;
+    width: 100%;
+  position: fixed;
+  display: flex;
+  background-color: white;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.4s ease-in-out;
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+.headerimg{
+  width: 25vw;
+  rotate: 3deg;
+  position: absolute;
+  left: 13.5vw;
+  top: 1vw;
+  overflow: hidden;
+}
+
+
+
+
+
+.btn{
+  display: flex;
+  margin-right: 2vw;
+}
+
+.listbtn{
+  width: 8vw;
+  height: 3vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  color: rgb(0, 0, 0);
+  font-size: 1vw;
+  margin: 1vw 0.7vw 1vw 0.7vw;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+  z-index: 100;
+ 
+}
+.listbtn:hover{
+  background-color: #000000;
+  color: rgb(255, 255, 255);
+}
+
+
+
+
+.listbtng{
+  width: 11vw;
+  height: 3vw;
+  color: rgb(0, 0, 0);
+  font-size:1vw ;
+  margin: 1vw ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  border-color: rgba(0, 0, 0, 0);
+  border-style: solid;
+  border-width: 0.1vw;
+}
+.listbtng:hover{
+  background-color: #000000;
+  color: rgb(255, 255, 255);
+}
+
+
+.listicon{
+  width: 4vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.hero {
+  height: 15vw; 
+  width: 80%;
+  margin-left: 10%;
+  background:linear-gradient(
+    rgba(255, 255, 255, 0.2), 
+    rgba(255, 255, 255, 0.2)
+  ), url('在地烘豆商 的複本/6.png');
+  background-size: 100% ; 
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.4);
+}
+
+
+.productword{
+    width: 90vw;
+    text-align: center;
+    font-size: 6vw;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color:#b5c75d ;
+    font-weight: bolder;
+    letter-spacing: 0.8em;
+}
+
+
+
+
+
+
+
+
+
+.phone{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.phone img{
+    width: 80%;
+}
+
+
+.joinusbtn{
+    position: absolute;
+    width: 15vw;
+    height: 5vw;
+    font-size: 1.5vw;
+    cursor: pointer;
+    background-color: white;
+    border-color: #000000;
+    border-radius: 1vw;
+    left: 17vw;
+    top: 100vw;
+    transition: all 0.4s ease-in-out;
+}
+
+.joinusbtn:hover{
+    transition: all 0.4s ease-in-out;
+    background-color: #000000;
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+.footer{
+  width: 100%;
+  height: 10vw;
+  background-color: #4c974c;
+  display: block;
+}
+.footerdiv{
+  display: flex;
+  justify-content: center;
+}
+.footer img{
+  width:fit-content ;
+  justify-content: center;
+  height: 8vw;
+}
+
+.footericon{
+    height: 6vw;background-color: black;display: none;justify-content: center;margin-bottom: 2vw;
+  }
+  .footericondiv{
+    width: 40%;display: flex;justify-content: space-evenly;height: 2vw;margin-top: 2vw;transition: all 0.5s;
+  }
+  .footericondiv img{
+    height: 100%;
+    border-radius: 50%;
+    border-width: 0.1vw;
+    border-style: solid;
+    border-color: white;
+    cursor: pointer;
+  }
+  
+  .footericon img:hover{
+    border: none;
+  }
+
+  .footerword{
+    font-size: 1vw;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: white;
+    font-weight: lighter;
+    margin-bottom: 2vw;
+  }

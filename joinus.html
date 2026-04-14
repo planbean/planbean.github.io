@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <meta charset="utf-8" >
+          <link rel="icon" href="logo/favicon.png">
+          <meta name="keywords" content="">
+          <meta name="description" content="">
+          <link rel="stylesheet" type="text/css" href="joinus.css">
+          <title>Plan Bean 豆點計畫 </title>
+    </head>    
+    <body>
+        
+       <header class="header" >
+        <a href="index.html" style="text-decoration: none;" class="logo">
+             <img src="logo/plant bean for AI02.png">
+        </a>
+        <div class="btn">
+            <img src="photo/plant bean for AI02.png" class="headerimg">
+            <a href="index.html" style="text-decoration: none;" class="listbtn" id="main-btn">
+                首<div class="wordspace"></div>頁 ｜ MAIN
+            </a>
+            <a href="product.html" style="text-decoration: none;" class="listbtng" id="main-btng">
+                產<div class="wordspace"></div>品 ｜ PRODUCT
+            </a>
+             <a href="aboutus.html" style="text-decoration: none;" class="listbtng" id="main-btng">
+                關<div class="wordspace"></div>於<div class="wordspace"></div>我<div class="wordspace"></div>們｜ ABOUT US
+            </a>
+            <a href="joinus.html" style="text-decoration: none;" class="listbtng" id="main-btngg">
+                加<div class="wordspace"></div>入<div class="wordspace"></div>我<div class="wordspace"></div>們｜ JOIN US
+            </a>
+            
+            <div class="listicon">
+                <a href="cart.html">
+                <img style="width: 100%;cursor: pointer;" src="header icon/17.png" onmouseover="headera(this)" onmouseout="headeraa(this)" id="hda">
+                </a>
+            </div>
+            <div class="listicon">
+                <img style="width: 100%;cursor: pointer;" src="header icon/18.png" onmouseover="headerb(this)" onmouseout="headerbb(this)" id="hdb">
+            </div>
+            <div class="listicon">
+                <img style="width: 100%;cursor: pointer;" src="header icon/19.png" onmouseover="headerc(this)" onmouseout="headercc(this)" id="hdc">
+            </div>
+        </div>
+  
+        </header>
+
+
+        <main >
+            <div style="height: 8vw;"></div>
+            
+            
+            <div class="phone">
+                <img src="photo/共好生態圈｜JOIN US，，.png">
+            </div>
+
+            <button class="joinusbtn">
+                加入我們 >>
+            </button>
+
+            
+            
+
+
+
+
+           
+            
+           
+            
+        </main>
+        <footer class="footer">
+            <div class="footerdiv"><img src="photo/F.png"></div>
+            <div class="footericon">
+                <div class="footericondiv">
+                    <a href=""><img src="footer icon/01-1.png" onmouseover="footera(this)" onmouseout="footeraa(this)" id="bta" style="border: none;" alt="facebook"></a>
+                    <a href=""><img src="footer icon/02-1.png" onmouseover="footerb(this)" onmouseout="footerbb(this)" id="btb" alt="instagram"></a>
+                    <a href=""><img src="footer icon/03-1.png" onmouseover="footerc(this)" onmouseout="footercc(this)" id="btc" alt="line"></a>
+                    <a href=""><img src="footer icon/04-1.png" onmouseover="footerd(this)" onmouseout="footerdd(this)" id="btd" alt="twitter"></a>
+                    <a href=""><img src="footer icon/05-1.png" onmouseover="footere(this)" onmouseout="footeree(this)" id="bte" alt="pinterest"></a>
+                    <a href=""><img src="footer icon/06-1.png" onmouseover="footerf(this)" onmouseout="footerff(this)" id="btf" alt="youtube"></a>
+                    <a href=""><img src="footer icon/07-1.png" onmouseover="footerg(this)" onmouseout="footergg(this)" id="btg" alt="linkedin"></a>
+                    <a href=""><img src="footer icon/08-1.png" onmouseover="footerh(this)" onmouseout="footerhh(this)" id="bth" alt="behance"></a>
+                </div>
+                
+            </div>
+            <div class="footerword">Copyright resvered Plan-Bean 2026.</div>
+        </footer>
+        <script>
+
+
+
+
+
+
+// 在結帳頁面的 JS
+const cartList = document.querySelector('.cart-items-list');
+const grandTotalDisplay = document.getElementById('grandTotal');
+
+// 核心功能一：印出購物車清單
+function renderCart() {
+  // 1. 讀取記憶
+  let cart = JSON.parse(localStorage.getItem('dotPlanCart')) || [];
+  
+  // 2. 清空畫面原本的內容
+  cartList.innerHTML = '';
+
+  // 3. 如果購物車是空的
+  if (cart.length === 0) {
+    cartList.innerHTML = '<p style="text-align:center; padding: 20px;">購物車目前空空的喔！去逛逛吧～</p>';
+    grandTotalDisplay.textContent = 'NT$ 0';
+    return;
+  }
+
+  // 4. 依照記憶中的資料，一條一條印出 HTML
+  cart.forEach((item, index) => {
+    const html = `
+      <div class="cart-item" data-index="${index}">
+        <img src="${item.image}" alt="${item.name}" class="item-img">
+        <div class="item-info">
+          <h4 class="item-name">${item.name}</h4>
+          <p class="item-price" data-price="${item.price}">單價：NT$ ${item.price}</p>
+        </div>
+        <div class="item-quantity">
+          <button class="qty-btn minus-btn">−</button>
+          <input type="number" class="qty-input" value="${item.quantity}" min="1">
+          <button class="qty-btn plus-btn">+</button>
+        </div>
+        <div class="item-subtotal">NT$ ${item.price * item.quantity}</div>
+        <button class="remove-btn" aria-label="移除商品">✖</button>
+      </div>
+    `;
+    // 把這段 HTML 塞進清單容器裡
+    cartList.insertAdjacentHTML('beforeend', html);
+  });
+
+  // 印完之後計算總金額
+  updateCartTotal();
+}
+
+// 核心功能二：計算總金額 (維持原本的邏輯即可)
+function updateCartTotal() {
+  const cartItems = document.querySelectorAll('.cart-item');
+  let total = 0;
+  cartItems.forEach(item => {
+    const price = parseFloat(item.querySelector('.item-price').dataset.price);
+    const quantity = parseInt(item.querySelector('.qty-input').value);
+    item.querySelector('.item-subtotal').textContent = `NT$ ${price * quantity}`;
+    total += (price * quantity);
+  });
+  grandTotalDisplay.textContent = `NT$ ${total}`;
+}
+
+// 核心功能三：儲存結帳頁面的數量變更回 localStorage
+function saveCartState() {
+  const cartItems = document.querySelectorAll('.cart-item');
+  let cart = JSON.parse(localStorage.getItem('dotPlanCart')) || [];
+  
+  cartItems.forEach(item => {
+    const index = item.dataset.index; // 抓取是陣列中的第幾個
+    const quantity = parseInt(item.querySelector('.qty-input').value);
+    if(cart[index]) {
+      cart[index].quantity = quantity; // 更新陣列中的數量
+    }
+  });
+  
+  localStorage.setItem('dotPlanCart', JSON.stringify(cart));
+}
+
+// 綁定事件 (加減數量與刪除)
+cartList.addEventListener('click', function(event) {
+  const target = event.target;
+  const cartItem = target.closest('.cart-item'); 
+  if (!cartItem) return;
+
+  const qtyInput = cartItem.querySelector('.qty-input');
+  let currentQty = parseInt(qtyInput.value);
+
+  if (target.classList.contains('plus-btn')) {
+    qtyInput.value = currentQty + 1;
+    updateCartTotal();
+    saveCartState(); // 記得存檔
+  }
+
+  if (target.classList.contains('minus-btn')) {
+    if (currentQty > 1) {
+      qtyInput.value = currentQty - 1;
+      updateCartTotal();
+      saveCartState(); // 記得存檔
+    }
+  }
+
+  if (target.classList.contains('remove-btn')) {
+    // 從陣列中刪除該項目
+    let cart = JSON.parse(localStorage.getItem('dotPlanCart')) || [];
+    const index = cartItem.dataset.index;
+    cart.splice(index, 1); // 刪除一筆資料
+    localStorage.setItem('dotPlanCart', JSON.stringify(cart));
+    
+    // 重新印出畫面
+    renderCart(); 
+  }
+});
+
+// 網頁載入時，執行第一次印出清單
+renderCart();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            /*header icon*/
+function headera(){
+    document.getElementById("hda").src="header icon/17-1.png"
+}
+function headeraa(){
+    document.getElementById("hda").src="header icon/17.png"
+}
+function headerb(){
+    document.getElementById("hdb").src="header icon/18-1.png"
+}
+function headerbb(){
+    document.getElementById("hdb").src="header icon/18.png"
+}
+function headerc(){
+    document.getElementById("hdc").src="header icon/19-1.png"
+}
+function headercc(){
+    document.getElementById("hdc").src="header icon/19.png"
+}
+
+
+
+
+
+
+ 
+/*footer icon*/
+function footera(){
+    document.getElementById("bta").src="footer icon/01.png"
+}
+function footeraa(){
+    document.getElementById("bta").src="footer icon/01-1.png"
+}
+function footerb(){
+    document.getElementById("btb").src="footer icon/02.jpg"
+}
+function footerbb(){
+    document.getElementById("btb").src="footer icon/02-1.png"
+}
+function footerc(){
+    document.getElementById("btc").src="footer icon/03.png"
+}
+function footercc(){
+    document.getElementById("btc").src="footer icon/03-1.png"
+}
+function footerd(){
+    document.getElementById("btd").src="footer icon/04.png"
+}
+function footerdd(){
+    document.getElementById("btd").src="footer icon/04-1.png"
+}
+function footere(){
+    document.getElementById("bte").src="footer icon/05.png"
+}
+function footeree(){
+    document.getElementById("bte").src="footer icon/05-1.png"
+}
+function footerf(){
+    document.getElementById("btf").src="footer icon/06.png"
+}
+function footerff(){
+    document.getElementById("btf").src="footer icon/06-1.png"
+}
+function footerg(){
+    document.getElementById("btg").src="footer icon/07.png"
+}
+function footergg(){
+    document.getElementById("btg").src="footer icon/07-1.png"
+}
+function footerh(){
+    document.getElementById("bth").src="footer icon/08.png"
+}
+function footerhh(){
+    document.getElementById("bth").src="footer icon/08-1.png"
+}
+
+            
+        </script>
+    </body>
+</html>
