@@ -18,61 +18,43 @@
     border-radius: 8px;
   }
 
+  .topspace{
+    height:8vw ;
+}
    .logo{
+    width: 100%;
   height: 100%;
   display: flex;
  }
  .logo img{
-  height: 90%;
+  height: 100%;
   margin: 0 0 0 1vw;
  }
 
 
 
-  header {
+ .header {
     height: 8vw;
-        width: 100%;
+    width: 100%;
   position: fixed;
   display: flex;
-  z-index: 1000;
+  background-color: white;
   justify-content: space-between;
   align-items: center;
-  background-color: transparent;
   transition: all 0.4s ease-in-out;
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+.headerimg{
+  width: 25vw;
+  rotate: 3deg;
+  position: absolute;
+  left: 13.5vw;
+  top: 1vw;
+  overflow: hidden;
 }
 
 
-/* JavaScript  .scrolled active*/
-header.scrolled {
-  background-color: white;
-  padding-top: 1vh; 
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-.hero {
-  height: 50vw; 
-  width: 100%;
-  background:linear-gradient(
-    rgba(255, 255, 255, 0.4), 
-    rgba(255, 255, 255, 0.4)
-  ), url('在地烘豆商 的複本/6.png');
-  background-size: 100% ; 
-  background-repeat: no-repeat;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-
-.productword{
-    width: 90vw;
-    text-align: center;
-    font-size: 6vw;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color:#b5c75d ;
-    font-weight: bolder;
-    letter-spacing: 0.8em;
-}
 
 
 
@@ -82,19 +64,18 @@ header.scrolled {
 }
 
 .listbtn{
-  width: 6.5vw;
+  width: 8vw;
   height: 3vw;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-style: solid;
-  border-width: 0.15vw;
-  border-color: rgb(0, 0, 0);
+  
   color: rgb(0, 0, 0);
   font-size: 1vw;
-  margin: 1vw;
+  margin: 1vw 0.7vw 1vw 0.7vw;
   cursor: pointer;
   transition: all 0.4s ease-in-out;
+  z-index: 100;
  
 }
 .listbtn:hover{
@@ -102,21 +83,15 @@ header.scrolled {
   color: rgb(255, 255, 255);
 }
 
-.listbtn.scrolled{
-  color: rgb(0, 0, 0);
-  border-color: rgb(0, 0, 0);
-}
-.listbtn.scrolled:hover{
-  color: #ffffff;
-  background-color: #000000;
-}
+
+
 
 .listbtng{
-  width: 7vw;
+  width: 11vw;
   height: 3vw;
   color: rgb(0, 0, 0);
   font-size:1vw ;
-  margin: 1vw;
+  margin: 1vw ;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -132,18 +107,50 @@ header.scrolled {
   color: rgb(255, 255, 255);
 }
 
-.listbtng.scrolled{
-  color: rgb(0, 0, 0);
-  border-color: rgb(0, 0, 0);
-  border-style: solid;
-  border-width: 0.1vw;
-}
-.listbtng.scrolled:hover{
-  color: #ffffff;
-  background-color: #000000;
+
+.listicon{
+  width: 4vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
 }
 
 
+
+
+
+
+
+
+
+
+.hero {
+  height: 50vw; 
+  width: 80%;
+  margin-left: 10%;
+  background:linear-gradient(
+    rgba(255, 255, 255, 0.4), 
+    rgba(255, 255, 255, 0.4)
+  ), url('在地烘豆商 的複本/6.png');
+  background-size: 100% ; 
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.4);
+}
+
+
+.productword{
+    width: 90vw;
+    text-align: center;
+    font-size: 6vw;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color:#b5c75d ;
+    font-weight: bolder;
+    letter-spacing: 0.8em;
+}
 
 .wordspace{
   width: 0.2vw;
@@ -158,10 +165,190 @@ header.scrolled {
 
 
 
+
+
+/* 父容器：用來限制控制器的活動範圍 */
+.product-image-container {
+  position: relative;
+  width: 100%; /* 根據你的排版調整 */
+  border-radius: 12px;
+  overflow: hidden;
+  margin-top: 3vw;
+}
+
+
+
+/* 浮動的數量控制器 */
+.quantity-overlay {
+  position: absolute;
+  bottom: 4vw; /* 距離底部 15px */
+  left: 4vw;  /* 距離右側 15px */
+  
+  display: flex;
+  align-items: center;
+  
+  /* 毛玻璃質感設計，適合品牌調性 */
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(1vw);
+  border-radius: 30px; /* 膠囊形狀 */
+  padding: 0.5vw;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* 加減按鈕 */
+.qty-btn {
+  background: transparent;
+  border: none;
+  width: 3vw;
+  height: 3vw;
+  border-radius: 50%;
+  font-size: 2vw;
+  color: #555;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.4s ease;
+}
+
+/* 按鈕懸停效果 */
+.qty-btn:hover {
+  background: #d8c4a0; /* 豆點計劃的淺金色 */
+  color: #fff;
+}
+
+/* 中間的數字輸入框 */
+.qty-input {
+  width: 3vw;
+  text-align: center;
+  border: none;
+  background: transparent;
+  font-size: 1.2vw;
+  font-weight: bold;
+  color: #333;
+  outline: none;
+}
+
+/* --- 隱藏 number 輸入框預設的上下箭頭 --- */
+/* Chrome, Safari, Edge, Opera */
+.qty-input::-webkit-outer-spin-button,
+.qty-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --- 整體商品卡片外觀 --- */
+.product-card {
+  width: 80%;
+  background-color: #fff;
+  border-radius: 12px;
+  margin-left: 10%;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  font-family: "Microsoft JhengHei", sans-serif;
+}
+
+/* --- 圖片與數量控制器 --- */
+.product-image-container {
+  position: relative;
+  width: 100%;
+  height: auto; /* 圖片高度 */
+}
+
+.product-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 獨立的數量控制器 (改放在圖片正下方居中) */
+.quantity-overlay {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%); /* 確保絕對置中 */
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(5px);
+  border-radius: 30px;
+  padding: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.qty-btn { background: transparent; border: none; width: 30px; height: 30px; font-size: 18px; cursor: pointer; transition: 0.2s;}
+.qty-btn:hover { background: #d8c4a0; color: white; border-radius: 50%; }
+.qty-input { width: 40px; text-align: center; border: none; background: transparent; font-weight: bold; outline: none; }
+.qty-input::-webkit-outer-spin-button, .qty-input::-webkit-inner-spin-button { -webkit-appearance: none; }
+
+/* --- 獨立的下半部資訊與按鈕 --- */
+.product-info {
+  padding: 20px;
+  text-align: center;
+}
+
+.product-title {
+  font-size: 18px;
+  color: #333;
+  margin: 0 0 10px 0;
+}
+
+.product-price {
+  font-size: 16px;
+  color: #666;
+  margin: 0 0 20px 0;
+}
+
+/* 獨立後的加入購物車按鈕 */
+.add-to-cart-btn {
+  width: 100%; /* 讓按鈕填滿卡片寬度 */
+  background-color: #d8c4a0; /* 豆點品牌色 */
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 0;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #c4af8b;
+}
+
+.add-to-cart-btn:active {
+  transform: scale(0.98); /* 點擊時微縮的物理回饋感 */
+}
+
+/* 購物車視窗 CSS 維持原樣即可 */
+
+
+
+
+
+
+
+
+
 .footer{
   width: 100%;
-  height: 27vw;
-  background-color: #d4c396;
+  height: 10vw;
+  background-color: #4c974c;
   display: block;
 }
 .footerdiv{
@@ -171,11 +358,11 @@ header.scrolled {
 .footer img{
   width:fit-content ;
   justify-content: center;
-  height: 15vw;
+  height: 8vw;
 }
 
 .footericon{
-    height: 6vw;background-color: #d4c396;display: flex;justify-content: center;margin-bottom: 2vw;
+    height: 6vw;background-color: black;display: none;justify-content: center;margin-bottom: 2vw;
   }
   .footericondiv{
     width: 40%;display: flex;justify-content: space-evenly;height: 2vw;margin-top: 2vw;transition: all 0.5s;
