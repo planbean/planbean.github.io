@@ -195,7 +195,9 @@
   width: 100%;
   height: 10vw;
   background-color: #4c974c;
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .footerdiv{
   display: flex;
@@ -232,5 +234,4 @@
     text-align: center;
     color: white;
     font-weight: lighter;
-    margin-bottom: 2vw;
   }
